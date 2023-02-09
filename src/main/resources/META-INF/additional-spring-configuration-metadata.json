@@ -1,0 +1,17 @@
+{"properties": [
+    {
+      "name": "foodCommerce.jwt.refresh.expiration",
+      "type": "java.lang.String",
+      "description": "JWT expiration refresh token value"
+    },
+    {
+      "name": "foodCommerce.jwt.expiration",
+      "type": "java.lang.String",
+      "description": "JWT expiration token value"
+    },
+    {
+      "name": "foodCommerce.jwt.secret",
+      "type": "java.lang.String",
+      "description": "JWT secret value"
+    }
+  ]}
