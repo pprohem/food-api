@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.foodcommerce.foodapi.dto.Products.ProductRequestDTO;
@@ -31,6 +33,15 @@ public class ProductService {
         return productRepository.findAll().stream()
                 .map(ProductResponseDTO::new).collect(Collectors.toList());
     }
+
+
+
+    public Page <ProductResponseDTO> searchProducts(String name , Boolean isActive, Pageable pageable) {
+        Page<Product> products = productRepository.findByNameContainingIgnoreCaseAndIsActive(name, isActive, pageable);
+        return products.map(ProductResponseDTO::new);
+    }
+
+
 
     public ProductResponseDTO findProductById(Long id) {
         return productRepository.findById(id).map(ProductResponseDTO::new)
