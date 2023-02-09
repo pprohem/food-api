@@ -18,8 +18,8 @@ import io.jsonwebtoken.SignatureException;
 import io.jsonwebtoken.UnsupportedJwtException;
 
 @Component
-public class jwtUtils {
-    private static final Logger logger = LoggerFactory.getLogger(jwtUtils.class);
+public class JwtUtils{
+    private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
     @Value("${foodCommerce.jwt.secret}")
     private String jwtSecret;

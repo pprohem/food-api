@@ -22,7 +22,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class AuthenticationTokenFilter extends OncePerRequestFilter {
 
     @Autowired
-    private jwtUtils jwtUtils;
+    private JwtUtils jwtUtils;
 
     @Autowired
     private UserDetailsServiceImplements userDetailsService;
