@@ -19,7 +19,7 @@ import jakarta.transaction.Transactional;
 
 @Service
 public class RefreshTokenService {
-    @Value("${foodDely.jwt.refresh.expiration}")
+    @Value("${foodCommerce.jwt.refresh.expiration}")
     private Long refreshTokenDurationMs;
 
     @Autowired
