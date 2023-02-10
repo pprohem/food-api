@@ -34,7 +34,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/auth")
-@Tag(name = "auth", description = "Autenticação de usuario")
+@Tag(name = "Auth", description = "User Authentication")
 
 
 public class AuthController {
@@ -109,7 +109,8 @@ public class AuthController {
 
     @PostMapping("/refreshtoken")
     @Operation(summary = "Refresh Token", description = "Refresh Token", responses = {
-            @ApiResponse(responseCode = "200", description = "Successfully Refresh Token!", content = @Content(mediaType = "application/json", schema = @Schema(implementation = RefreshTokenRequestDTO.class))),
+            @ApiResponse(responseCode = "200", description = "Successfully Refresh Token!", content = @Content(mediaType = "application/json", 
+            schema = @Schema(implementation = RefreshTokenRequestDTO.class))),
             @ApiResponse(responseCode = "400", ref = "BadRequest"),
             @ApiResponse(responseCode = "401", ref = "badcredentials"),
             @ApiResponse(responseCode = "422", ref = "unprocessableEntity"),
