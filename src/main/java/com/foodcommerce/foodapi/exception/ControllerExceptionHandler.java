@@ -40,7 +40,7 @@ public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
    */
   @ExceptionHandler({ CategoryException.class, DataIntegrityViolationException.class, MethodArgumentTypeMismatchException.class,
        FileSizeLimitExceededException.class,
-      SizeLimitExceededException.class })
+      SizeLimitExceededException.class, PurchaseException.class })
   public ResponseEntity<ApiError> handleExceptions(RuntimeException ex) {
     log.error("Error: ", ex);
     return new ResponseEntity<>(

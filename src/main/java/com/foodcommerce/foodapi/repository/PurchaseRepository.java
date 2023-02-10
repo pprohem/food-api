@@ -2,6 +2,8 @@ package com.foodcommerce.foodapi.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PurchaseRepository extends JpaRepository <PurchaseRepository, Long> {
+import com.foodcommerce.foodapi.model.Purchase;
+
+public interface PurchaseRepository extends JpaRepository <Purchase, Long> {
     
 }
